@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { DollarSign, TrendingUp, TrendingDown, PieChart, Calendar, Download, Eye, FileText } from "lucide-react"
-import Navbar from "../components/navbar"
+import Navbar from "../components/Navbar"
 
 export default function Keuangan() {
   const [selectedPeriod, setSelectedPeriod] = useState("2024")

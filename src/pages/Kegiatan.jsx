@@ -1,7 +1,7 @@
 "use client"
 
 import { Calendar, Users, Award, Leaf, Heart, Trophy, MapPin, Clock } from "lucide-react"
-import Navbar from "../components/navbar"
+import Navbar from "../components/Navbar"
 
 export default function Kegiatan() {
   const kegiatanRutin = [

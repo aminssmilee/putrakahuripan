@@ -1,7 +1,7 @@
 "use client"
 
 import { Users, Target, Heart, Award, Calendar, Star, TrendingUp } from "lucide-react"
-import Navbar from "../components/navbar"
+import Navbar from "../components/Navbar";
 
 export default function Tentang() {
   return (
