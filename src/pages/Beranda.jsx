@@ -1,7 +1,7 @@
 "use client";
 
-import { Users, Target, Heart, Calendar, Award, MapPin } from "lucide-react";
-// import Navbar from "../components/navbar";
+import {Target, Heart} from "lucide-react";
+import Navbar from "../components/Navbar";
 // import banner from "../assets/img/kartar.jpg";
 import profile from "../assets/img/kartar.jpg";
 import { useEffect, useState } from "react";

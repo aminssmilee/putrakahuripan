@@ -7,7 +7,6 @@ export default function Tentang() {
   return (
     <>
       <Navbar />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
