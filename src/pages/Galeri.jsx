@@ -1,4 +1,4 @@
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 // src/pages/Galeri.jsx
 export default function Galeri() {
