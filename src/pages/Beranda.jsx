@@ -33,9 +33,7 @@ export default function Beranda() {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 5000); // ganti gambar setiap 5 detik
     return () => clearInterval(interval);
-  }, []);
-
-
+  }, [images.length]);
   
   return (
     <>
