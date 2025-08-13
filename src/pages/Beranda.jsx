@@ -13,8 +13,8 @@ export default function Beranda() {
 
   // Daftar gambar background
   const images = [
-  { src: banner, alt: "Banner Karang Taruna" },
-  { src: kartar, alt: "Banner Karang Taruna" },
+  banner,
+  kartar,
 ];
 
   // Efek parallax
