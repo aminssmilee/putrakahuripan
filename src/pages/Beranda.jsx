@@ -2,7 +2,8 @@
 
 import {Target, Heart} from "lucide-react";
 import Navbar from "../components/Navbar";
-// import banner from "../assets/img/kartar.jpg";
+import banner from "../assets/img/banner.jpg";
+import kartar from "../assets/img/kartar.jpg";
 import profile from "../assets/img/kartar.jpg";
 import { useEffect, useState } from "react";
 
@@ -12,8 +13,8 @@ export default function Beranda() {
 
   // Daftar gambar background
   const images = [
-  "banner.jpg",
-  "kartar.jpg"
+  { src: banner, alt: "Banner Karang Taruna" },
+  { src: kartar, alt: "Banner Karang Taruna" },
 ];
 
   // Efek parallax
