@@ -8,7 +8,7 @@ export default function Tentang() {
     <>
       <Navbar />
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      {/* <section className="pt-20 pb-16 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Tentang Kami</h1>
@@ -18,10 +18,10 @@ export default function Tentang() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Sejarah Singkat */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -74,7 +74,7 @@ export default function Tentang() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Visi Misi */}
       <section className="py-20 bg-gray-50">
@@ -86,7 +86,7 @@ export default function Tentang() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Visi */}
-            <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+            {/* <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
               <div className="flex items-center mb-8">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                   <Target className="w-8 h-8 text-blue-600" />
@@ -101,7 +101,7 @@ export default function Tentang() {
             </div>
 
             {/* Misi */}
-            <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+            {/* <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
               <div className="flex items-center mb-8">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
                   <Heart className="w-8 h-8 text-red-600" />
@@ -130,7 +130,7 @@ export default function Tentang() {
                   Menciptakan sinergi dengan berbagai pihak untuk pembangunan desa yang berkelanjutan
                 </li>
               </ul>
-            </div>
+            </div>  */}
           </div>
         </div>
       </section>
@@ -201,7 +201,7 @@ export default function Tentang() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Ketua */}
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=150&width=150&text=Ketua"
                 alt="Ketua"
@@ -212,10 +212,10 @@ export default function Tentang() {
               <p className="text-gray-600 text-sm">
                 Memimpin organisasi dengan visi yang jelas dan komitmen tinggi untuk kemajuan pemuda desa
               </p>
-            </div>
+            </div> */}
 
             {/* Wakil Ketua */}
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=150&width=150&text=Wakil"
                 alt="Wakil Ketua"
@@ -226,10 +226,10 @@ export default function Tentang() {
               <p className="text-gray-600 text-sm">
                 Mendampingi ketua dalam menjalankan program kerja dan koordinasi dengan berbagai pihak
               </p>
-            </div>
+            </div> */}
 
             {/* Sekretaris */}
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=150&width=150&text=Sekretaris"
                 alt="Sekretaris"
@@ -240,10 +240,10 @@ export default function Tentang() {
               <p className="text-gray-600 text-sm">
                 Mengelola administrasi organisasi dan dokumentasi seluruh kegiatan dengan tertib dan rapi
               </p>
-            </div>
+            </div> */}
 
             {/* Bendahara */}
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=150&width=150&text=Bendahara"
                 alt="Bendahara"
@@ -254,10 +254,10 @@ export default function Tentang() {
               <p className="text-gray-600 text-sm">
                 Mengelola keuangan organisasi dengan transparan dan akuntabel untuk semua program kegiatan
               </p>
-            </div>
+            </div> */}
 
             {/* Koordinator Program */}
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=150&width=150&text=Koordinator"
                 alt="Koordinator Program"
@@ -268,10 +268,10 @@ export default function Tentang() {
               <p className="text-gray-600 text-sm">
                 Mengkoordinasikan seluruh program kerja dan memastikan pelaksanaan berjalan sesuai rencana
               </p>
-            </div>
+            </div> */}
 
             {/* Humas */}
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=150&width=150&text=Humas"
                 alt="Humas"
@@ -282,13 +282,13 @@ export default function Tentang() {
               <p className="text-gray-600 text-sm">
                 Membangun komunikasi dan kerjasama dengan masyarakat serta instansi terkait
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Pencapaian & Statistik */}
-      <section className="py-20 bg-blue-600 text-white">
+      {/* <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Pencapaian Kami</h2>
@@ -335,10 +335,10 @@ export default function Tentang() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Bergabunglah Bersama Kami</h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -354,7 +354,7 @@ export default function Tentang() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

@@ -121,7 +121,7 @@ export default function Navbar() {
                   >
                     Profil
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/visi-misi"
                     onClick={() => setMenuOpen(false)}
                     className={`${linkClass(
@@ -132,7 +132,7 @@ export default function Navbar() {
                       }`}
                   >
                     Visi & Misi
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/struktur"
                     onClick={() => setMenuOpen(false)}

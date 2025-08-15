@@ -37,14 +37,14 @@ export default function Footer() {
     { name: "Tentang Kami", url: "/tentang" },
     { name: "Program Kegiatan", url: "/kegiatan" },
     { name: "Galeri", url: "/galeri" },
-    { name: "Berita", url: "/berita" },
+    // { name: "Berita", url: "/berita" },
     { name: "Kontak", url: "/kontak" },
   ];
 
   const externalLinks = [
-    { name: "Portal Desa Madulegi", url: "#" },
-    { name: "Kementerian Sosial RI", url: "https://kemensos.go.id" },
-    { name: "Karang Taruna Indonesia", url: "#" },
+    // { name: "Portal Desa Madulegi", url: "#" },
+    // { name: "Kementerian Sosial RI", url: "https://kemensos.go.id" },
+    // { name: "Karang Taruna Indonesia", url: "#" },
   ];
 
   return (
