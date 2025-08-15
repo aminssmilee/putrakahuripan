@@ -2,111 +2,112 @@
 
 import { Calendar, Users, Award, Leaf, Heart, Trophy, MapPin, Clock } from "lucide-react"
 import Navbar from "../components/Navbar"
+import lomba from "../assets/Pumflate/PAMFLET LOMBA ANAK-ANAK.png"
 
 export default function Kegiatan() {
-  const kegiatanRutin = [
-    {
-      nama: "Bersih-Bersih Lapangan",
-      deskripsi: "Kegiatan gotong royong membersihkan lapangan desa dan fasilitas umum setiap minggu",
-      jadwal: "Setiap Minggu Pagi",
-      waktu: "07:00 - 09:00 WIB",
-      lokasi: "Lapangan Desa Suka Maju",
-      peserta: "50+ Anggota",
-      icon: Leaf,
-      color: "green",
-      gambar: "/placeholder.svg?height=300&width=400&text=Bersih+Lapangan",
-    },
-    {
-      nama: "Kerja Bakti Lingkungan",
-      deskripsi: "Program pembersihan lingkungan, penanaman pohon, dan pengelolaan sampah",
-      jadwal: "Setiap Bulan",
-      waktu: "06:00 - 10:00 WIB",
-      lokasi: "Seluruh Wilayah Desa",
-      peserta: "100+ Warga",
-      icon: Heart,
-      color: "blue",
-      gambar: "/placeholder.svg?height=300&width=400&text=Kerja+Bakti",
-    },
-    {
-      nama: "Bakti Sosial",
-      deskripsi: "Kegiatan bantuan sosial untuk masyarakat kurang mampu dan lansia",
-      jadwal: "Setiap 3 Bulan",
-      waktu: "08:00 - 12:00 WIB",
-      lokasi: "Balai Desa",
-      peserta: "30+ Relawan",
-      icon: Users,
-      color: "red",
-      gambar: "/placeholder.svg?height=300&width=400&text=Bakti+Sosial",
-    },
-    {
-      nama: "Pelatihan Kewirausahaan",
-      deskripsi: "Workshop dan pelatihan untuk mengembangkan jiwa wirausaha pemuda",
-      jadwal: "Setiap 2 Bulan",
-      waktu: "13:00 - 17:00 WIB",
-      lokasi: "Aula Desa",
-      peserta: "40+ Peserta",
-      icon: Award,
-      color: "purple",
-      gambar: "/placeholder.svg?height=300&width=400&text=Pelatihan+Wirausaha",
-    },
-  ]
+  // const kegiatanRutin = [
+  //   {
+  //     nama: "Bersih-Bersih Lapangan",
+  //     deskripsi: "Kegiatan gotong royong membersihkan lapangan desa dan fasilitas umum setiap minggu",
+  //     jadwal: "Setiap Minggu Pagi",
+  //     waktu: "07:00 - 09:00 WIB",
+  //     lokasi: "Lapangan Desa Suka Maju",
+  //     peserta: "50+ Anggota",
+  //     icon: Leaf,
+  //     color: "green",
+  //     gambar: lomba
+  //   },
+  //   {
+  //     nama: "Kerja Bakti Lingkungan",
+  //     deskripsi: "Program pembersihan lingkungan, penanaman pohon, dan pengelolaan sampah",
+  //     jadwal: "Setiap Bulan",
+  //     waktu: "06:00 - 10:00 WIB",
+  //     lokasi: "Seluruh Wilayah Desa",
+  //     peserta: "100+ Warga",
+  //     icon: Heart,
+  //     color: "blue",
+  //     gambar: "/placeholder.svg?height=300&width=400&text=Kerja+Bakti",
+  //   },
+  //   {
+  //     nama: "Bakti Sosial",
+  //     deskripsi: "Kegiatan bantuan sosial untuk masyarakat kurang mampu dan lansia",
+  //     jadwal: "Setiap 3 Bulan",
+  //     waktu: "08:00 - 12:00 WIB",
+  //     lokasi: "Balai Desa",
+  //     peserta: "30+ Relawan",
+  //     icon: Users,
+  //     color: "red",
+  //     gambar: "/placeholder.svg?height=300&width=400&text=Bakti+Sosial",
+  //   },
+  //   {
+  //     nama: "Pelatihan Kewirausahaan",
+  //     deskripsi: "Workshop dan pelatihan untuk mengembangkan jiwa wirausaha pemuda",
+  //     jadwal: "Setiap 2 Bulan",
+  //     waktu: "13:00 - 17:00 WIB",
+  //     lokasi: "Aula Desa",
+  //     peserta: "40+ Peserta",
+  //     icon: Award,
+  //     color: "purple",
+  //     gambar: "/placeholder.svg?height=300&width=400&text=Pelatihan+Wirausaha",
+  //   },
+  // ]
 
-  const kegiatanTahunan = [
-    {
-      nama: "Lomba 17 Agustus",
-      deskripsi: "Berbagai perlombaan dalam rangka memperingati Hari Kemerdekaan Indonesia",
-      tanggal: "17 Agustus 2024",
-      lokasi: "Lapangan Desa",
-      kategori: ["Balap Karung", "Panjat Pinang", "Tarik Tambang", "Lomba Makan Kerupuk"],
-      hadiah: "Total Rp 5.000.000",
-      peserta: "200+ Peserta",
-      gambar: "/placeholder.svg?height=300&width=400&text=Lomba+17+Agustus",
-    },
-    {
-      nama: "Festival Budaya Desa",
-      deskripsi: "Pentas seni dan budaya untuk melestarikan tradisi lokal",
-      tanggal: "15 September 2024",
-      lokasi: "Panggung Terbuka Desa",
-      kategori: ["Tari Tradisional", "Musik Daerah", "Teater", "Pameran Kerajinan"],
-      hadiah: "Piala dan Uang Pembinaan",
-      peserta: "150+ Seniman",
-      gambar: "/placeholder.svg?height=300&width=400&text=Festival+Budaya",
-    },
-    {
-      nama: "Turnamen Olahraga Antar RT",
-      deskripsi: "Kompetisi olahraga untuk mempererat silaturahmi antar warga",
-      tanggal: "Oktober 2024",
-      lokasi: "Lapangan Olahraga Desa",
-      kategori: ["Sepak Bola", "Voli", "Badminton", "Futsal"],
-      hadiah: "Piala Bergilir",
-      peserta: "300+ Atlet",
-      gambar: "/placeholder.svg?height=300&width=400&text=Turnamen+Olahraga",
-    },
-  ]
+  // const kegiatanTahunan = [
+  //   {
+  //     nama: "Lomba 17 Agustus",
+  //     deskripsi: "Berbagai perlombaan dalam rangka memperingati Hari Kemerdekaan Indonesia",
+  //     tanggal: "17 Agustus 2024",
+  //     lokasi: "Lapangan Desa",
+  //     kategori: ["Balap Karung", "Panjat Pinang", "Tarik Tambang", "Lomba Makan Kerupuk"],
+  //     hadiah: "Total Rp 5.000.000",
+  //     peserta: "200+ Peserta",
+  //     gambar: "/placeholder.svg?height=300&width=400&text=Lomba+17+Agustus",
+  //   },
+  //   {
+  //     nama: "Festival Budaya Desa",
+  //     deskripsi: "Pentas seni dan budaya untuk melestarikan tradisi lokal",
+  //     tanggal: "15 September 2024",
+  //     lokasi: "Panggung Terbuka Desa",
+  //     kategori: ["Tari Tradisional", "Musik Daerah", "Teater", "Pameran Kerajinan"],
+  //     hadiah: "Piala dan Uang Pembinaan",
+  //     peserta: "150+ Seniman",
+  //     gambar: "/placeholder.svg?height=300&width=400&text=Festival+Budaya",
+  //   },
+  //   {
+  //     nama: "Turnamen Olahraga Antar RT",
+  //     deskripsi: "Kompetisi olahraga untuk mempererat silaturahmi antar warga",
+  //     tanggal: "Oktober 2024",
+  //     lokasi: "Lapangan Olahraga Desa",
+  //     kategori: ["Sepak Bola", "Voli", "Badminton", "Futsal"],
+  //     hadiah: "Piala Bergilir",
+  //     peserta: "300+ Atlet",
+  //     gambar: "/placeholder.svg?height=300&width=400&text=Turnamen+Olahraga",
+  //   },
+  // ]
 
-  const kegiatanMendatang = [
-    {
-      nama: "Lomba Kebersihan Lingkungan",
-      tanggal: "25 Februari 2024",
-      waktu: "08:00 WIB",
-      lokasi: "Seluruh RT di Desa",
-      deskripsi: "Kompetisi kebersihan antar RT dengan penilaian dari tim juri",
-    },
-    {
-      nama: "Pelatihan Digital Marketing",
-      tanggal: "10 Maret 2024",
-      waktu: "13:00 WIB",
-      lokasi: "Aula Desa",
-      deskripsi: "Workshop pemasaran digital untuk UMKM dan wirausaha muda",
-    },
-    {
-      nama: "Donor Darah Massal",
-      tanggal: "20 Maret 2024",
-      waktu: "09:00 WIB",
-      lokasi: "Puskesmas Desa",
-      deskripsi: "Kegiatan donor darah bekerjasama dengan PMI setempat",
-    },
-  ]
+  // const kegiatanMendatang = [
+  //   {
+  //     nama: "Lomba Kebersihan Lingkungan",
+  //     tanggal: "25 Februari 2024",
+  //     waktu: "08:00 WIB",
+  //     lokasi: "Seluruh RT di Desa",
+  //     deskripsi: "Kompetisi kebersihan antar RT dengan penilaian dari tim juri",
+  //   },
+  //   {
+  //     nama: "Pelatihan Digital Marketing",
+  //     tanggal: "10 Maret 2024",
+  //     waktu: "13:00 WIB",
+  //     lokasi: "Aula Desa",
+  //     deskripsi: "Workshop pemasaran digital untuk UMKM dan wirausaha muda",
+  //   },
+  //   {
+  //     nama: "Donor Darah Massal",
+  //     tanggal: "20 Maret 2024",
+  //     waktu: "09:00 WIB",
+  //     lokasi: "Puskesmas Desa",
+  //     deskripsi: "Kegiatan donor darah bekerjasama dengan PMI setempat",
+  //   },
+  // ]
 
 
   return (
@@ -114,19 +115,32 @@ export default function Kegiatan() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white">
+      <section className="pt-20 pb-16 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Kegiatan Kami</h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
-              Berbagai program dan kegiatan yang kami laksanakan untuk membangun masyarakat yang lebih baik
+            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
+              Berbagai program dan kegiatan lomba yang kami adakan untuk mendorong partisipasi dan kreativitas masyarakat
             </p>
+          </div>
+
+          {/* Daftar Kegiatan Lomba */}
+
+          {/* Poster Lomba */}
+          <div className="mt-16 text-center">
+            {/* <h2 className="text-3xl font-bold mb-6">Poster Lomba Terbaru</h2> */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden inline-block">
+              <img src={lomba} alt="Poster Lomba" className="w-full max-w-md" />
+            </div>
           </div>
         </div>
       </section>
 
+
+
       {/* Kegiatan Rutin */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Kegiatan Rutin</h2>
@@ -189,10 +203,10 @@ export default function Kegiatan() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Kegiatan Tahunan */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Event Tahunan</h2>
@@ -267,10 +281,10 @@ export default function Kegiatan() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Kegiatan Mendatang */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Kegiatan Mendatang</h2>
@@ -314,10 +328,10 @@ export default function Kegiatan() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Statistik Kegiatan */}
-      <section className="py-20 bg-green-600 text-white">
+      {/* <section className="py-20 bg-green-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Statistik Kegiatan</h2>
@@ -346,10 +360,10 @@ export default function Kegiatan() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Bergabunglah dalam Kegiatan Kami</h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -365,7 +379,7 @@ export default function Kegiatan() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

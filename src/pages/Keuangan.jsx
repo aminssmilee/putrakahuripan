@@ -1,104 +1,172 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { DollarSign, TrendingUp, TrendingDown, PieChart, Calendar, Download, Eye, FileText } from "lucide-react"
 import Navbar from "../components/Navbar"
 
 export default function Keuangan() {
-  const [selectedPeriod, setSelectedPeriod] = useState("2024")
+  const [selectedPeriod, setSelectedPeriod] = useState("2025")
   const [selectedMonth, setSelectedMonth] = useState("all")
 
   const dataKeuangan = [
-    { tanggal: "2024-01-01", keterangan: "Iuran Anggota Januari", kategori: "Iuran", masuk: 500000, keluar: 0 },
-    {
-      tanggal: "2024-01-05",
-      keterangan: "Pembelian Bendera Merah Putih",
-      kategori: "Perlengkapan",
-      masuk: 0,
-      keluar: 150000,
-    },
-    { tanggal: "2024-01-10", keterangan: "Donasi Warga untuk Kegiatan", kategori: "Donasi", masuk: 750000, keluar: 0 },
-    {
-      tanggal: "2024-01-15",
-      keterangan: "Biaya Konsumsi Rapat Bulanan",
-      kategori: "Operasional",
-      masuk: 0,
-      keluar: 200000,
-    },
-    {
-      tanggal: "2024-01-20",
-      keterangan: "Bantuan dari Pemerintah Desa",
-      kategori: "Bantuan",
-      masuk: 2000000,
-      keluar: 0,
-    },
-    {
-      tanggal: "2024-01-25",
-      keterangan: "Pembelian Alat Kebersihan",
-      kategori: "Perlengkapan",
-      masuk: 0,
-      keluar: 300000,
-    },
-    { tanggal: "2024-02-01", keterangan: "Iuran Anggota Februari", kategori: "Iuran", masuk: 520000, keluar: 0 },
-    { tanggal: "2024-02-08", keterangan: "Biaya Acara Bakti Sosial", kategori: "Program", masuk: 0, keluar: 800000 },
-    { tanggal: "2024-02-12", keterangan: "Donasi Masyarakat", kategori: "Donasi", masuk: 600000, keluar: 0 },
-    { tanggal: "2024-02-18", keterangan: "Pembelian Sound System", kategori: "Aset", masuk: 0, keluar: 1500000 },
-    {
-      tanggal: "2024-02-25",
-      keterangan: "Biaya Transport Kegiatan",
-      kategori: "Operasional",
-      masuk: 0,
-      keluar: 250000,
-    },
-    { tanggal: "2024-03-01", keterangan: "Iuran Anggota Maret", kategori: "Iuran", masuk: 480000, keluar: 0 },
-    { tanggal: "2024-03-10", keterangan: "Hasil Penjualan Merchandise", kategori: "Usaha", masuk: 350000, keluar: 0 },
-    {
-      tanggal: "2024-03-15",
-      keterangan: "Biaya Pelatihan Kewirausahaan",
-      kategori: "Program",
-      masuk: 0,
-      keluar: 600000,
-    },
-    { tanggal: "2024-03-22", keterangan: "Donasi untuk Korban Bencana", kategori: "Sosial", masuk: 0, keluar: 500000 },
-    { tanggal: "2024-03-28", keterangan: "Bantuan Sponsor Acara", kategori: "Sponsor", masuk: 1000000, keluar: 0 },
+    { tanggal: "2025-07-29", keterangan: "Sisa Saldo Pengurus Sebelumnya", kategori: "Saldo Lama  ", masuk: 730000, keluar: 0 },
+    { tanggal: "2025-07-29", keterangan: "Pembelian jajan rapat", kategori: "Konsumsi", masuk: 0, keluar: 58000 },
+    { tanggal: "2025-08-02", keterangan: "Pembelian jajan rapat", kategori: "Konsumsi", masuk: 0, keluar: 40000 },
+    { tanggal: "2025-08-03", keterangan: "Pembelian jajan rapat", kategori: "Konsumsi", masuk: 0, keluar: 27500 },
+    { tanggal: "2025-08-04", keterangan: "Dana Paguyuba Pemuda Jaya", kategori: "Donatur", masuk: 1000000, keluar: 0 },
+    { tanggal: "2025-08-04", keterangan: "Donatur Pak Matrais", kategori: "Donatur", masuk: 200000, keluar: 0 },
+    { tanggal: "2025-08-04", keterangan: "Dana Desa KarangTaruna", kategori: "Dana Desa", masuk: 350000, keluar: 0 },
+    { tanggal: "2025-08-04", keterangan: "Pembelian jajan", kategori: "Konsumsi", masuk: 0, keluar: 2000 },
+    { tanggal: "2025-08-05", keterangan: "Pembelian jajan rapat", kategori: "Konsumsi", masuk: 0, keluar: 16000 },
+    { tanggal: "2025-08-07", keterangan: "Pembuatan Proposal", kategori: "Surat", masuk: 0, keluar: 420000 },
+    { tanggal: "2025-08-07", keterangan: "Donatur Pak Suprayitno", kategori: "Donatur", masuk: 50000, keluar: 0 },
+    { tanggal: "2025-08-08", keterangan: "Donatur Pak Kartolo", kategori: "Donatur", masuk: 1000000, keluar: 0 },
+    { tanggal: "2025-08-10", keterangan: "Pembuatan Proposal", kategori: "Surat", masuk: 0, keluar: 40000 },
+    { tanggal: "2025-08-10", keterangan: "Pemasukan Kartar", kategori: "Iuran", masuk: 60000, keluar: 0 },
+    { tanggal: "2025-08-10", keterangan: "Pembelian Peralatan Lomba", kategori: "Perlengkapan", masuk: 0, keluar: 6500 },
+    { tanggal: "2025-08-12", keterangan: "Donatur Pak Suwarno", kategori: "Donatur", masuk: 100000, keluar: 0 },
+    { tanggal: "2025-08-12", keterangan: "Donatur Mas Takul (wifi)", kategori: "Donatur", masuk: 300000, keluar: 0 },
+    { tanggal: "2025-08-15", keterangan: "Donatur Kaji Jumi'ah", kategori: "Donatur", masuk: 100000, keluar: 0 },
+    { tanggal: "2025-08-15", keterangan: "Donatur Pak Pri (Wapo)", kategori: "Donatur", masuk: 100000, keluar: 0 },
+    { tanggal: "2025-08-15", keterangan: "Donatur Apotek Zacky", kategori: "Donatur", masuk: 50000, keluar: 0 },
+    { tanggal: "2025-08-15", keterangan: "Donatur Toko Tiara", kategori: "Donatur", masuk: 50000, keluar: 0 },
+    { tanggal: "2025-08-15", keterangan: "Pengeluaran Pumflate", kategori: "Perlengkapan", masuk: 0, keluar: 10000 },
+    
   ]
 
-  const totalMasuk = dataKeuangan.reduce((total, item) => total + item.masuk, 0)
-  const totalKeluar = dataKeuangan.reduce((total, item) => total + item.keluar, 0)
+  const filteredData = useMemo(() => {
+    return dataKeuangan.filter((item) => {
+      const itemDate = new Date(item.tanggal)
+      const itemYear = itemDate.getFullYear().toString()
+      const itemMonth = (itemDate.getMonth() + 1).toString().padStart(2, "0")
+
+      if (selectedPeriod !== itemYear) return false
+      if (selectedMonth !== "all" && selectedMonth !== itemMonth) return false
+
+      return true
+    })
+  }, [selectedMonth, selectedPeriod])
+
+  const totalMasuk = useMemo(() => filteredData.reduce((total, item) => total + item.masuk, 0), [filteredData])
+
+  const totalKeluar = useMemo(() => filteredData.reduce((total, item) => total + item.keluar, 0), [filteredData])
+
   const saldoAkhir = totalMasuk - totalKeluar
 
-  const kategoriPemasukan = [
-    { nama: "Iuran Anggota", jumlah: 1500000, persentase: 30, color: "bg-blue-500" },
-    { nama: "Donasi Masyarakat", jumlah: 1350000, persentase: 27, color: "bg-green-500" },
-    { nama: "Bantuan Pemerintah", jumlah: 2000000, persentase: 40, color: "bg-purple-500" },
-    { nama: "Usaha Mandiri", jumlah: 350000, persentase: 7, color: "bg-yellow-500" },
-    { nama: "Sponsor", jumlah: 1000000, persentase: 20, color: "bg-red-500" },
-  ]
+  const kategoriPemasukan = useMemo(() => {
+    const categories = {}
+    const colors = ["bg-blue-500", "bg-green-500", "bg-purple-500", "bg-yellow-500", "bg-indigo-500", "bg-pink-500"]
+    let colorIndex = 0
 
-  const kategoriPengeluaran = [
-    { nama: "Program Kegiatan", jumlah: 1400000, persentase: 35, color: "bg-blue-600" },
-    { nama: "Operasional", jumlah: 450000, persentase: 11, color: "bg-green-600" },
-    { nama: "Perlengkapan", jumlah: 450000, persentase: 11, color: "bg-purple-600" },
-    { nama: "Aset Organisasi", jumlah: 1500000, persentase: 38, color: "bg-yellow-600" },
-    { nama: "Kegiatan Sosial", jumlah: 500000, persentase: 13, color: "bg-red-600" },
-  ]
+    filteredData.forEach((item) => {
+      if (item.masuk > 0) {
+        if (!categories[item.kategori]) {
+          categories[item.kategori] = {
+            nama: item.kategori,
+            jumlah: 0,
+            color: colors[colorIndex % colors.length],
+          }
+          colorIndex++
+        }
+        categories[item.kategori].jumlah += item.masuk
+      }
+    })
 
-  const laporanBulanan = [
-    { bulan: "Januari", pemasukan: 3250000, pengeluaran: 650000, saldo: 2600000 },
-    { bulan: "Februari", pemasukan: 1120000, pengeluaran: 2550000, saldo: 1170000 },
-    { bulan: "Maret", pemasukan: 1830000, pengeluaran: 1100000, saldo: 1900000 },
-  ]
+    const result = Object.values(categories).map((cat) => ({
+      ...cat,
+      persentase: totalMasuk > 0 ? Math.round((cat.jumlah / totalMasuk) * 100) : 0,
+    }))
+
+    return result.length > 0
+      ? result
+      : [{ nama: "Belum ada Pemasukan", jumlah: 0, persentase: 0, color: "bg-gray-400" }]
+  }, [filteredData, totalMasuk])
+
+  const kategoriPengeluaran = useMemo(() => {
+    const categories = {}
+    const colors = ["bg-red-500", "bg-orange-500", "bg-rose-500", "bg-amber-500", "bg-red-600", "bg-orange-600"]
+    let colorIndex = 0
+
+    filteredData.forEach((item) => {
+      if (item.keluar > 0) {
+        if (!categories[item.kategori]) {
+          categories[item.kategori] = {
+            nama: item.kategori,
+            jumlah: 0,
+            color: colors[colorIndex % colors.length],
+          }
+          colorIndex++
+        }
+        categories[item.kategori].jumlah += item.keluar
+      }
+    })
+
+    const result = Object.values(categories).map((cat) => ({
+      ...cat,
+      persentase: totalKeluar > 0 ? Math.round((cat.jumlah / totalKeluar) * 100) : 0,
+    }))
+
+    return result.length > 0
+      ? result
+      : [{ nama: "Belum ada Pengeluaran", jumlah: 0, persentase: 0, color: "bg-gray-400" }]
+  }, [filteredData, totalKeluar])
+
+  const laporanBulanan = useMemo(() => {
+    const monthlyData = {}
+    const monthNames = [
+      "Januari",
+      "Februari",
+      "Maret",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Agustus",
+      "September",
+      "Oktober",
+      "November",
+      "Desember",
+    ]
+
+    dataKeuangan.forEach((item) => {
+      const date = new Date(item.tanggal)
+      const year = date.getFullYear()
+      const month = date.getMonth()
+      const monthKey = `${year}-${month}`
+
+      if (year.toString() === selectedPeriod) {
+        if (!monthlyData[monthKey]) {
+          monthlyData[monthKey] = {
+            bulan: monthNames[month],
+            pemasukan: 0,
+            pengeluaran: 0,
+            saldo: 0,
+          }
+        }
+
+        monthlyData[monthKey].pemasukan += item.masuk
+        monthlyData[monthKey].pengeluaran += item.keluar
+        monthlyData[monthKey].saldo = monthlyData[monthKey].pemasukan - monthlyData[monthKey].pengeluaran
+      }
+    })
+
+    return Object.values(monthlyData).sort((a, b) => {
+      const monthA = monthNames.indexOf(a.bulan)
+      const monthB = monthNames.indexOf(b.bulan)
+      return monthA - monthB
+    })
+  }, [selectedPeriod])
 
   return (
     <>
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white">
+      <section className="pt-20 pb-16 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Transparansi Keuangan</h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
               Laporan keuangan yang transparan dan akuntabel untuk kepercayaan masyarakat
             </p>
           </div>
@@ -109,7 +177,11 @@ export default function Keuangan() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ringkasan Keuangan 2024</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Ringkasan Keuangan {selectedPeriod}
+              {selectedMonth !== "all" &&
+                ` - ${["", "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"][Number.parseInt(selectedMonth)]}`}
+            </h2>
             <div className="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
           </div>
 
@@ -144,7 +216,11 @@ export default function Keuangan() {
                   <div className="text-green-100">Saldo Akhir</div>
                 </div>
               </div>
-              <div className="text-sm text-green-100">Per 31 Maret 2024</div>
+              <div className="text-sm text-green-100">
+                {selectedMonth !== "all"
+                  ? `Per ${["", "Januari", "Februari", "Maret"][Number.parseInt(selectedMonth)]} ${selectedPeriod}`
+                  : `Per ${selectedPeriod}`}
+              </div>
             </div>
           </div>
         </div>
@@ -289,8 +365,7 @@ export default function Keuangan() {
                   onChange={(e) => setSelectedPeriod(e.target.value)}
                   className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
-                  <option value="2024">Tahun 2024</option>
-                  <option value="2023">Tahun 2023</option>
+                  <option value="2025">Tahun 2025</option>
                 </select>
               </div>
               <div className="flex items-center space-x-2">
@@ -303,6 +378,15 @@ export default function Keuangan() {
                   <option value="01">Januari</option>
                   <option value="02">Februari</option>
                   <option value="03">Maret</option>
+                  <option value="04">April</option>
+                  <option value="05">Mei</option>
+                  <option value="06">Juni</option>
+                  <option value="07">Juli</option>
+                  <option value="08">Agustus</option>
+                  <option value="09">September</option>
+                  <option value="10">Oktober</option>
+                  <option value="11">November</option>
+                  <option value="12">Desember</option>
                 </select>
               </div>
               <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center space-x-2">
@@ -327,7 +411,7 @@ export default function Keuangan() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {dataKeuangan.map((transaksi, index) => (
+                  {filteredData.map((transaksi, index) => (
                     <tr key={index} className="hover:bg-gray-50">
                       <td className="px-6 py-4 text-sm text-gray-900">
                         {new Date(transaksi.tanggal).toLocaleDateString("id-ID")}
@@ -377,28 +461,28 @@ export default function Keuangan() {
       </section>
 
       {/* Komitmen Transparansi */}
-      <section className="py-20 bg-green-600 text-white">
+      <section className="py-20 bg-white text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-8">
             <FileText className="w-8 h-8" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Komitmen Transparansi</h2>
-          <p className="text-xl text-green-100 mb-8 leading-relaxed">
+          <p className="text-xl text-black mb-8 leading-relaxed">
             Kami berkomitmen untuk menyajikan laporan keuangan yang transparan, akurat, dan dapat dipertanggungjawabkan
             kepada seluruh anggota dan masyarakat.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <div className="text-2xl font-bold mb-2">100%</div>
-              <div className="text-green-100">Transparansi</div>
+              <div className="text-black">Transparansi</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <div className="text-2xl font-bold mb-2">Monthly</div>
-              <div className="text-green-100">Laporan Rutin</div>
+              <div className="text-black">Laporan Rutin</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <div className="text-2xl font-bold mb-2">Open</div>
-              <div className="text-green-100">Akses Publik</div>
+              <div className="text-black">Akses Publik</div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import {Target, Heart} from "lucide-react";
+import { Target, Heart } from "lucide-react";
 import Navbar from "../components/Navbar";
 import banner from "../assets/img/banner.jpg";
 import kartar from "../assets/img/kartar.jpg";
@@ -13,9 +13,9 @@ export default function Beranda() {
 
   // Daftar gambar background
   const images = [
-  banner,
-  kartar,
-];
+    banner,
+    kartar,
+  ];
 
   // Efek parallax
   const handleScroll = () => {
@@ -35,7 +35,7 @@ export default function Beranda() {
     }, 5000); // ganti gambar setiap 5 detik
     return () => clearInterval(interval);
   }, [images.length]);
-  
+
   return (
     <>
       <Navbar />
@@ -47,13 +47,13 @@ export default function Beranda() {
       >
         {/* Background dengan parallax */}
         {/* Background dengan efek parallax + slider */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-out"
-        style={{
-          backgroundImage: `url(${images[currentIndex]})`,
-          transform: `translateY(${offsetY * 0.3}px)`
-        }}
-      ></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-out"
+          style={{
+            backgroundImage: `url(${images[currentIndex]})`,
+            transform: `translateY(${offsetY * 0.3}px)`
+          }}
+        ></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg">
@@ -188,10 +188,14 @@ export default function Beranda() {
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Masih Dalam Tahap Pengembangan
+            </p>
+            {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Berbagai program inovatif yang kami jalankan untuk pemberdayaan
               masyarakat dan pengembangan generasi muda
-            </p>
+            </p> */}
           </div>
+
 
           {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -284,9 +288,12 @@ export default function Beranda() {
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
           </div>
+          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto">
+            Masih Dalam Tahap Pengembangan
+          </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            {/* <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=250&width=400"
                 alt="Kegiatan Bakti Sosial"
@@ -305,9 +312,9 @@ export default function Beranda() {
                   kurang mampu...
                 </p>
               </div>
-            </article>
+            </article> */}
 
-            <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            {/* <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=250&width=400"
                 alt="Pelatihan Kepemimpinan"
@@ -326,9 +333,9 @@ export default function Beranda() {
                   public speaking...
                 </p>
               </div>
-            </article>
+            </article> */}
 
-            <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            {/* <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <img
                 src="/placeholder.svg?height=250&width=400"
                 alt="Festival Budaya"
@@ -347,14 +354,14 @@ export default function Beranda() {
                   lokal...
                 </p>
               </div>
-            </article>
+            </article> */}
           </div>
-
+          {/* 
           <div className="text-center mt-12">
             <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition-colors">
               Lihat Semua Berita
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -367,8 +374,11 @@ export default function Beranda() {
             </h2>
             <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
           </div>
+          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto">
+            Masih Dalam Tahap Pengembangan
+          </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div className="aspect-square overflow-hidden rounded-lg">
               <img
                 src="/placeholder.svg?height=300&width=300"
@@ -425,7 +435,7 @@ export default function Beranda() {
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
