@@ -2,7 +2,6 @@
 
 import { Target, Heart } from "lucide-react";
 import Navbar from "../components/Navbar";
-import banner from "../assets/img/banner.jpg";
 import kartar from "../assets/img/kartar.jpg";
 import profile from "../assets/img/kartar.jpg";
 import { useEffect, useState } from "react";
@@ -13,7 +12,6 @@ export default function Beranda() {
 
   // Daftar gambar background
   const images = [
-    banner,
     kartar,
   ];
 
